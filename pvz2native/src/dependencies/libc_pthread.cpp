@@ -36,8 +36,9 @@ constexpr std::uint32_t kETIMEDOUT = 110;
  * which is the same epoch the host's system_clock uses. */
 std::chrono::system_clock::time_point deadline_from(GuestCall &c, std::uint32_t ts) {
     std::uint32_t sec = c.read32(ts), nsec = c.read32(ts + 4);
-    return std::chrono::system_clock::time_point(std::chrono::seconds(sec) +
-                                                 std::chrono::nanoseconds(nsec));
+    return std::chrono::system_clock::time_point(
+        std::chrono::duration_cast<std::chrono::system_clock::duration>(
+            std::chrono::seconds(sec) + std::chrono::nanoseconds(nsec)));
 }
 
 /* ---------------------------------------------------------------- mutex

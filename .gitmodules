@@ -1,0 +1,14 @@
+[submodule "SDL"]
+	path = SDL
+	url = https://github.com/libsdl-org/SDL.git
+	branch = SDL2
+
+[submodule "dynarmic"]
+	path = dynarmic
+	url = https://github.com/lioncash/dynarmic
+[submodule "stb"]
+	path = stb
+	url = https://github.com/nothings/stb
+[submodule "glad"]
+	path = glad
+	url = https://github.com/dav1dde/glad

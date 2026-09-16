@@ -99,6 +99,11 @@ Añadir una versión nueva = una entrada en `kVersions` de [symbols.cpp](pvz2nat
 
 El proyecto se compila con CMake.
 
+**Importante**: Clona con submodulos
+```bash
+git clone --recurse-submodules https://github.com/OptiJuegos/PvZ2Native.git
+```
+
 ### Windows (MinGW)
 La forma rápida es [compile.bat](compile.bat)
 ```bat

@@ -3,6 +3,9 @@ cmake_minimum_required (VERSION 3.1)
 project(pvz2native-core)
 
 file(GLOB_RECURSE SOURCE_FILES CONFIGURE_DEPENDS src/*.c src/*.cpp)
+if (NOT APPLE)
+    list(FILTER SOURCE_FILES EXCLUDE REGEX ".*/platform/macos/.*")
+endif()
 
 # Keep Objective-C out of CMake's language initialisation. The project already
 # uses Clang as its C compiler on macOS; this one source is compiled through the
